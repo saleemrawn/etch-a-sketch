@@ -20,4 +20,15 @@ function createSquares(amount) {
   });
 }
 
+function applyGridHover() {
+  const squares = document.querySelectorAll(".square");
+
+  squares.forEach(square => {
+    square.addEventListener("mouseover", () => {
+      square.classList.add("hover");
+    });
+  });
+}
+
 createGrid(16);
+applyGridHover();
