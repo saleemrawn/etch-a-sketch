@@ -1,7 +1,10 @@
-.container {
+main {
   width: 960px;
   min-height: 200px;
   margin: 0 auto;
+}
+
+.container {
   display: flex;
   justify-content: center;
 }
