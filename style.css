@@ -1,0 +1,22 @@
+.container {
+  width: 960px;
+  min-height: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.square {
+  height: 40px;
+  width: 40px;
+  flex: none;
+  border: 1px solid #cccccc;
+  margin-left: -1px;
+  margin-bottom: -1px;
+}
