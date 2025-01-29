@@ -2,6 +2,7 @@ main {
   width: 960px;
   min-height: 200px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .container {
@@ -26,4 +27,16 @@ main {
 
 .hover {
   background-color: lightskyblue;
+}
+
+.new-grid-bttn {
+  padding: 16px 40px;
+  margin: 24px 0;
+  border-radius: 100px;
+  border: none;
+}
+
+.new-grid-bttn:hover {
+  background-color: #cccccc;
+  cursor: pointer;
 }
