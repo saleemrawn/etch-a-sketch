@@ -1,5 +1,11 @@
 const container = document.querySelector(".container");
 
+function getUserGridSize() {
+  let gridSize = prompt("How many squares?");
+  if (gridSize >= 100) alert("Please choose a length less than 100.");
+  return grid;
+}
+
 function createGrid(amount) {
   createRows(amount);
   createSquares(amount);
