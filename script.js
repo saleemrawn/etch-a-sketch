@@ -1,17 +1,28 @@
-const container = document.querySelector(".container");
+const gridButton = document.querySelector(".new-grid-bttn");
 
-function getUserGridSize() {
-  let gridSize = prompt("How many squares?");
-  if (gridSize >= 100) alert("Please choose a length less than 100.");
-  return grid;
-}
+gridButton.addEventListener("click", () => {
+  createGrid();
+});
 
-function createGrid(amount) {
-  createRows(amount);
-  createSquares(amount);
+function createGrid() {
+  const container = document.querySelector(".container");
+  let gridSize = getUserGridSize();
+
+  if (gridSize >= 100) {
+    alert("Please choose a length less than 100.");
+    return;
+  }
+
+  container.innerHTML = "";
+
+  createRows(gridSize);
+  createSquares(gridSize);
+  applyGridHover();
 }
 
 function createRows(amount) {
+  const container = document.querySelector(".container");
+
   for (i = 1; i <= amount; i++) {
     container.insertAdjacentHTML("beforeend", "<div class='row'></div>");
   }
@@ -26,6 +37,11 @@ function createSquares(amount) {
   });
 }
 
+function getUserGridSize() {
+  let gridSize = prompt("How many squares?");
+  return gridSize;
+}
+
 function applyGridHover() {
   const squares = document.querySelectorAll(".square");
 
@@ -35,6 +51,3 @@ function applyGridHover() {
     });
   });
 }
-
-createGrid(16);
-applyGridHover();
