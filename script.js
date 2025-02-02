@@ -47,7 +47,7 @@ function applyGridHover() {
 
   squares.forEach(square => {
     square.addEventListener("mouseover", () => {
-      square.classList.add("hover");
+      square.style.backgroundColor = getRandomRGB();
     });
   });
 }
